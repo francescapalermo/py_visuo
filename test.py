@@ -1,5 +1,5 @@
 import utils
-import colors
+import custom_colors
 import numpy as np
 import seaborn as sns 
 from scipy import stats
@@ -25,8 +25,8 @@ utils.set_plot_features(fig, ax)
 
 glue = sns.load_dataset("glue").pivot("Model", "Task", "Score")
 fig, ax = plt.subplots(1, 2, figsize=(10, 5))
-sns.heatmap(glue, ax=ax[0], cmap=utils.get_continuous_cmap(colors.blue_heatmap_light))
-sns.heatmap(glue, ax=ax[1], cmap=utils.get_continuous_cmap(colors.blue_heatmap_dark))
+sns.heatmap(glue, ax=ax[0], cmap=utils.get_continuous_cmap(custom_colors.blue_heatmap_light))
+sns.heatmap(glue, ax=ax[1], cmap=utils.get_continuous_cmap(custom_colors.blue_heatmap_dark))
 
 plt.show()
 print('test')

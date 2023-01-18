@@ -152,3 +152,4 @@ def create_stack_plot(fig, ax, df, x_column, y_column, colors=[], filter_size=10
         ax.stackplot(x, y_smoothed, colors=colors)
 
     ax.legend(y_column, prop={'size': text_size})
+
