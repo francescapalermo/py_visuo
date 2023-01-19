@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 import matplotlib.dates as mdates
-import utils
+import visualise
 import custom_colors
 
 
@@ -36,14 +36,14 @@ def create_activity_plot(df, patient_list, month_list, location_list, column_pat
             plt.suptitle(patient + '-' + str(month))
             plt.xlabel("Time of the Day")
             plt.ylabel("Day")
-            utils.set_plot_features(fig, ax, show_legend=False)
+            visualise.set_plot_features(fig, ax, show_legend=False)
             ax.legend(location_list, bbox_to_anchor=(
                 1.05, 1), loc=2, borderaxespad=0.)
             if savefig:
                 plt.savefig(save_path + '{}_activity.svg'.format(patient))
 
 
-activity_df = pd.read_csv('./py_visual/data/Activity.csv')
+activity_df = pd.read_csv('./data/Activity.csv')
 activity_df['date'] = pd.to_datetime(activity_df['date'])
 print(activity_df['location_name'].unique())
 activity_df = activity_df.sort_values(by=['patient_id', 'date']).reset_index(drop=True)
