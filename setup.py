@@ -26,10 +26,10 @@ PACKAGE_NAME = 'py_visuo'
 
 
 setup(
-    name='py_visual',
+    name='py_visuo',
     version='0.0.1',    
     description='Collection of functions and classes for creating beautiful and informative plots in Python',
-    url='https://github.com/francescapalermo/py_visual/',
+    url='https://github.com/francescapalermo/py_visuo/',
     author='Francesca Palermo',
     author_email='f.palermo@imperial.ac.uk',
     license='MIT-License',
